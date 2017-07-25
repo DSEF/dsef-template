@@ -2,7 +2,7 @@
 (future abstract about what DSEF is)
 
 ## How to use
-1. Clone this repository to a desired location: `git clone git@github.com:DSEF/dsef-python.git`
+1. Clone this repository to a desired location within a Jupyter notebook server: `git clone git@github.com:DSEF/dsef-python.git`
 2. Define python enumerations for desired experiment modes
 3. Fill in Emulab information (this might work with other Testbeds, but it has only been tested with Emulab)
 4. Define experiment related variables
