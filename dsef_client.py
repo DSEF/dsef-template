@@ -112,9 +112,4 @@ class Experiment:
         self.wrapper_io = None
         self.client.close()
 
-        # for exp_id in self.results.keys():
-        #     print(self.results[exp_id])
-        #     with open('{}.yml'.format(exp_id), 'w') as f:
-        #         yaml.dump(self.results[exp_id], f)
-
         return self.results
