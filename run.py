@@ -1,28 +1,20 @@
 #!/usr/bin/env python3
-import rpyc
-import logger
-import sys
+from pydsef import Service, Registry
 
-class ExperimentService(rpyc.Service):
-    def on_connect(self):
+@Registry.experiment
+class MyExperiment(Service):
+    @Registry.setup
+    def setup(self, experiment_conf):
         pass
 
-    def on_disconnect(self):
+    @Registry.launch
+    def launch(self):
         pass
 
-    def exposed_setup(self, experiment_conf):
+    @Registry.run
+    def run(self):
         pass
 
-    def exposed_launch(self):
+    @Registry.teardown
+    def teardown(self):
         pass
-
-    def exposed_run(self):
-        pass
-
-    def exposed_teardown(self):
-        pass
-
-if __name__ == "__main__":
-    from rpyc.utils.server import *
-    t = ThreadedServer(ExperimentService, port = int(sys.argv[1]), protocol_config = {'allow_pickle':True})
-    t.start()
